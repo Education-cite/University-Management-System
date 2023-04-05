@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="Dashboard/base::layout(~{::section})">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Welcom To university</title>
+</head>
+
+<body>
+	<section>
+		<!--Start video Background-->
+		<div class=" remove-margin">
+			<div class="vid-parent">
+				<video playsinline autoplay muted loop>
+					<source src="videos/dhaka_university.mp4" type="">
+				</video>
+				<div class="vid-overlay"></div>
+			</div>
+			<div class="container-fluid vid-content">
+				<h1 class="my-content ">Welcome To visit our University (Dhaka)</h1>
+				<small class="my-content">Quality Education at Doorstep</small><br /><br />
+				<a th:href="@{/login}" class="btn btn-outline-danger">Get Started</a>
+			</div>
+		</div>
+		<!--End video Background-->
+
+		<!--Start Text Banner-->
+		<div class="container-fluid custom-bg txt-banner">
+			<div class="row bottom-banner">
+				<div class="col-sm">
+					<h5><i class="fas fa-users mr-3"></i>223+ All Staff</h5>
+				</div>
+				<div class="col-sm">
+					<h5><i class="fas fa-university"></i>4 CAMPUSES</h5>
+				</div>
+				<div class="col-sm">
+					<h5><i class="fas fa-certificate mr-3"></i>104 Degree Programs</h5>
+				</div>
+				<div class="col-sm">
+					<h5><i class="fas fa-user-graduate mr-3"></i>13000 Enroll Students</h5>
+				</div>
+				<div class="col-sm">
+					<h5><i class="far fa-address-card mr-3"></i>223 PHD Faculty</h5>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container mt-4" id="contact">
+			<h2 class="text-center mb-4">Contact Us</h2>
+			<!--Heading-->
+			<div class="row">
+			<!--Start Contact Us First Column-->
+				<div class="col-md-8">
+					<form  method="POST" th:action="@{/st-feedback}">
+						<input type="text" class="form-control" required name="name" placeholder="Name"><br/>
+						<input type="text" class="form-control" required name="subject" placeholder="Subject"><br/>
+						<input type="email" class="form-control" required name="email" placeholder="E-mail"><br/>
+						<textarea name="message" required
+									type="text" style="height: 100px;" class="form-control"
+									placeholder="Enter You Message Here..." id="address"
+									aria-describedby="emailHelp"></textarea><br/>
+						<input type="submit" class="btn btn-primary" name="submit" value="Send"><br/>
+					</form>
+				</div>
+				<!--End Contact Us First Column-->
+				<!--Start Contact Us Second Column-->
+				<div class="col-md-4 stripe text-white text-center mt-5">
+					<h4>Enamul</h4>
+					<p>Enamul,
+					Near in  Shabag<br/>
+					Phone: 01946905852<br/>
+					www.university.com
+					</p>
+				</div>
+				<!--End Contact Us First Column-->
+			</div>
+		<!--Heading-->
+		</div>
+		
+		<div class="container-fluid custom-bg mt-5">
+			<div class="row text-white text-center p-1">
+				<div class="col-sm">
+					<a style="text-decoration: none;" class="text-white social-hover" href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+				</div>
+				<div class="col-sm">
+					<a style="text-decoration: none;" class="text-white social-hover" href="#"><i class="fab fa-twitter"></i>Twitter</a>
+				</div>
+				<div class="col-sm">
+					<a style="text-decoration: none;" class="text-white social-hover" href="#"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+				</div>
+			</div>
+		</div>
+		<!--End Social Follow-->
+		
+		<!--Start About Section-->
+		<div class="container-fluid p-4" style="background-color:#E9ECEF">
+			<div class="container" style="background-color:#E9ECEF">
+				<div class="row text-center">
+					<div class="col-sm">
+						<h5>About Us</h5>
+						<p class="description" width="10%" height="10%">The University has introduced all the modern departments, teaching basic sciences, social and applied sciences with a credible base of quality education and research to equip the minds of young scholars with worthwhile objectives of life.</p>
+					</div>
+					<div class="col-sm">
+						<h5>Category</h5>
+						<a class="text-dark" href="#">Web Development</a><br/>
+						<a class="text-dark" href="#">Web Designing</a><br/>
+						<a class="text-dark" href="#">Android app Development</a><br/>
+						<a class="text-dark" href="#">IOS Development</a><br/>
+						<a class="text-dark" href="#">Data Analysis</a><br/>
+					</div>
+					<div class="col-sm">
+						<h5>Contact Us</h5>
+						<p>Enamul<br/> dhaka<br/>Phone:000000</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End About Section-->
+		
+		<!--Start Footer-->
+		<footer class="container-fluid custom-bg text-center p-2">
+		<small class="text-white">Copyright &copy; 2022|| Designed By Enamul Haque & Tawhide <br/> Supervised By sir Maruf Hasan</small>
+		</footer>
+		<!--End Footer-->
+		
+
+	</section>
+</body>
+
+</html>
